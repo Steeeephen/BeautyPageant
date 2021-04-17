@@ -5,6 +5,14 @@ import os
 
 num = sys.argv[1]
 
+for i in range(1,6):
+  for directory_type in ['input', 'static']:
+    round_directory = os.path.join(
+      directory_type,
+      f'round_{i}')
+    
+    os.makedirs(round_directory, exist_ok=True)
+
 # Get image filter
 filter_path = os.path.join(
   'input',
